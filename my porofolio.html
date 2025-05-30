@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: repeating-radial-gradient(circle, #daaddf, #ea74cf, #751678); /* Gradient background */
+    color: #ffffff;
+    }
+
+    header {
+    background: #7b0e83;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    }
+
+    header h1 {
+    font-size: 1.75rem;
+    margin: 0;
+    }
+
+    nav {
+    background: #540f73;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    }
+
+    nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    }
+
+    nav a:hover {
+    text-decoration: underline;
+    }
+
+    section {
+    padding: 2rem 1.5rem;
+    }
+
+    .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Align items (text) to the right */
+    color: rgb(242, 240, 240);
+    min-height: 100vh;
+    position: relative;
+    background: url('https://img.freepik.com/premium-vector/computer-programing-coding-web-development-with-isometric-laptop-displaying-futuristic-ui_375605-384.jpg?semt=ais_hybrid&w=740') no-repeat center center/cover;
+    padding: 0 5%;
+    text-align: right; /* Align text to the right */
+    }
+
+    .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* Light overlay */
+    z-index: -1;
+    }
+
+    .about h2 {
+    font-size: 4rem; /* Increased from 3rem to 4rem */
+    margin-bottom: 1rem;
+    }
+    .about p {
+    max-width: 600px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    }
+
+    .section-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3rem 5%;
+    gap: 2rem;
+    background-color: linear-gradient(45deg, #f0f0f0, #e8e0e3, #ffffff);
+    text-align: left;
+    }
+
+    .section-flex.reverse {
+    flex-direction: row-reverse;
+    }
+
+    .section-text {
+    flex: 1 1 400px;
+    }
+
+    .section-image {
+    flex: 1 1 400px;
+    text-align: center;
+    }
+
+    .section-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    }
+
+    ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    }
+
+    .project {
+    margin-bottom: 1rem;
+    }
+
+    .resume a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #5c0764;
+    color: rgb(255, 254, 254);
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: bold;
+    }
+
+    .resume a:hover {
+    background: #f196eb;
+    }
+
+    .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    }
+
+    footer {
+      background: #7b0e83;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .section-flex,
+    .section-flex.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-text,
+    .section-image {
+        flex: 1 1 100%;
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#blog">Blog</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Intro About Section -->
+  <section id="about" class="about">
+    <h2>Kurapati Bhaskar Datta</h2>
+    <p>I am a B-Tech 3rd year student, having a aim to become a full-stack web developer and a front-end developer.</p>
+  </section>
+
+  <!-- About Me Section (Text Left, Image Right) -->
+  <section id="blog" class="section-flex">
+    <div class="section-text">
+      <h2>Blog</h2>
+      <p>
+        I'm a full-stack developer with a strong foundation in modern web technologies.
+        I specialize in crafting responsive and intuitive user interfaces using React and Tailwind CSS.
+        I enjoy turning complex problems into simple, beautiful solutions.
+      </p>
+    </div>
+    <div class="section-image">
+      <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?semt=ais_hybrid&w=740" alt="About Me Illustration">
+    </div>
+  </section>
+
+  <!-- Skills Section (Image Left, Text Right) -->
+  <section id="skills" class="section-flex reverse">
+    <div class="section-text">
+      <h2>Skills</h2>
+      <ul>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Figma</li>
+        <li>MongoDB</li>
+        <li>Python</li>
+      </ul>
+    </div>
+    <div class="section-image">
+      <img src="https://png.pngtree.com/png-vector/20200429/ourmid/pngtree-web-development-concept-flat-design-png-image_2197063.jpg" alt="Skills Illustration">
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-flex">
+    <div class="section-text">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>PDF Data Extraction using OpenCV & MySQL</h3>
+        <p>Built a Python-based tool to automate the extraction of text from PDF documents using OpenCV
+            and Tesseract OCR - done at Tandom Digital Solutions during my Winter Semester(2023-24) Holidays
+            Processed and cleaned the extracted data, then structured and stored it into a MySQL database for
+            efficient retrieval</p>
+      </div>
+      <div class="project">
+        <h3>Solid waste Management Using Deep Learning</h3>
+        <p>Developed a solid waste classification system using deep learning techniques to automatically identify and sort various types of waste (e.g., organic, recyclable, hazardous) from images.
+             Employed a Convolutional Neural Network (CNN) architecture based on VGG-19 to train a robust model capable of accurate waste categorization. Applied preprocessing and data augmentation
+              strategies on a diverse dataset of waste images to improve model performance and ensure better generalization across real-world scenarios.</p>
+      </div>
+      <div class="project">
+        <h3>Hand Gesture Recognition Using Deep Learning</h3>
+        <p>>Developed an intelligent hand gesture recognition system using deep learning techniques to accurately interpret static and dynamic hand gestures. Leveraged a Convolutional Neural Network (CNN) architecture, 
+            trained on a custom dataset of hand gesture images to classify various gestures with high accuracy. Applied preprocessing and data augmentation to enhance model robustness. The system is designed to support 
+            touchless human-computer interaction, with potential applications in healthcare, assistive technologies, and smart environments</p>
+      </div>
+    </div>
+    <div class="section-image">
+      <img src="https://img.freepik.com/free-vector/hacker-operating-laptop-cartoon-icon-illustration-technology-icon-concept-isolated-flat-cartoon-style_138676-2387.jpg?semt=ais_hybrid&w=740" alt="Projects Illustration">
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section-flex reverse">
+    <div class="section-text resume">
+      <h2>Resume</h2>
+      <a href="my resume-.pdf" download>Download My Resume</a>
+    </div>
+    <div class="section-image">
+      <img src="https://png.pngtree.com/png-vector/20221121/ourmid/pngtree-cartoon-resume-icon-on-white-background-with-contract-document-vector-png-image_41886208.jpg" alt="Resume Illustration">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-flex">
+    <div class="section-text">
+      <h2>📞 Contact Me</h2>
+      <div class="contact-info">
+        <div>📧Email:saibhaskardatta@gamail.com</div>
+        <div>📱Phone: +91 6302421549</div>
+        <div>💼 LinkedIn:https://www.linkedin.com/in/bhaskar-sai-b79022253/</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 kurapati bhsakar datta. All rights reserved.</p>
+    </footer>
+</body>
+</html>
